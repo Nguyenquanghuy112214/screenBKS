@@ -1,0 +1,76 @@
+@import '../../../styles/Variable/index';
+
+.wrapper-slider {
+  @include flex();
+  height: 520px;
+  background-color: #f3f3f3;
+  @include tablet {
+  height: 360px;
+
+  }
+  &__left {
+    @include flex(start, center, nowrap);
+    flex-direction: column;
+    padding: 1.5rem 2rem 1.5rem 3.3rem;
+    @include mobile {
+      padding: 20px 7.5px;
+    }
+    .slider-text {
+      position: relative;
+      padding-left: 20px;
+      &__main {
+        padding-top: 0;
+        margin-bottom: 0.3em;
+        font-weight: 700;
+        color: #333;
+        line-height: 1.3em;
+        font-size: 3.2rem;
+      }
+      &__sub {
+        line-height: 1.3em;
+        font-size: 1.6rem;
+        font-weight: 400;
+      }
+
+      &::before {
+        content: '';
+        background-color: #900;
+        position: absolute;
+        top: 5%;
+        left: 0;
+        height: 90%;
+        width: 1.3px;
+      }
+    }
+
+    .slider-button {
+      margin-top: 44px;
+      button {
+        margin-left: 20px;
+        background-color: $main-color;
+        padding: 8px 44px;
+        color: white;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        transition: all 0.3s linear;
+        line-height: 18px;
+        &:hover {
+          background-color: #700;
+        }
+      }
+    }
+  }
+
+  &__right {
+    .img-slider1 {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      .img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

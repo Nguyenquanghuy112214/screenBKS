@@ -1,0 +1,58 @@
+@import '../../../styles/Variable/index';
+
+.wrapper {
+  padding: 40px 200px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    bottom: -20px;
+    left: 50%;
+    width: 10%;
+    height: 3px;
+    border-radius: 4px;
+    background-color: $main-color;
+    transform: translateX(-50%);
+  }
+  @include tablet {
+    padding: 40px 0px;
+  }
+  .list-item {
+    // @include flex(center, space-between, nowrap);
+    @include mobile {
+      @include flex(start, space-between, nowrap);
+      flex-direction: column;
+    }
+    .item {
+      li {
+        .link {
+          transition: all 0.2s linear;
+
+          &:hover .img-menu img {
+            filter: contrast(1.2);
+          }
+          &:hover .title {
+            color: $main-color;
+          }
+          .img-menu {
+            @include flex();
+            img {
+              max-width: 74px;
+            }
+          }
+          .title {
+          }
+        }
+      }
+    }
+
+    .title {
+      display: block;
+      text-align: center;
+      font-size: 1.4rem;
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+}

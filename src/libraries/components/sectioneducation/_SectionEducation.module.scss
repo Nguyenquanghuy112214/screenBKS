@@ -1,0 +1,38 @@
+@import '../../../styles/Variable/index';
+
+.wrapper {
+  padding: 72px 15px;
+  @include flex(center, center, nowrap);
+  flex-direction: column;
+  
+  .title {
+    font-size: 3.2rem;
+    line-height: 1.4;
+    font-weight: 500;
+    margin-bottom: 10px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: -1px;
+    padding: 0;
+    border: none;
+    text-rendering: optimizeSpeed;
+    position: relative;
+    text-align: center;
+  }
+  .line {
+    background-color: #222;
+    display: inline-block;
+    height: 1px;
+    width: 120px;
+    margin: 20px 0;
+  }
+
+  .subtitle {
+    font-weight: 400;
+    color: #333;
+    font-size: 1.6rem;
+    margin: 20px 0;
+    line-height: 20px;
+    text-align: center;
+  }
+}

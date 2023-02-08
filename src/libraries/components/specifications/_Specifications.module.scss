@@ -1,0 +1,29 @@
+@import '../../../styles/Variable/index';
+
+.wrapper {
+  margin-top: 100px;
+
+  .header {
+    position: relative;
+
+    text-align: center;
+    &-title {
+      background-color: #5cb6a1;
+      border-radius: 50px;
+      color: #fff;
+      padding: 20px 150px;
+      font-size: 2.8rem;
+      font-weight: 500;
+    }
+    .img-left {
+      position: absolute;
+      top: -30px;
+      left: 10px;
+    }
+    .img-right {
+      position: absolute;
+      top: -30px;
+      right: 10px;
+    }
+  }
+}

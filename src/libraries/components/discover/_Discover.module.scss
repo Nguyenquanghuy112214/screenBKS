@@ -1,0 +1,64 @@
+@import '../../../styles/Variable/index';
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  width: 100%;
+  @include tablet {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+  & .discover-item {
+    cursor: pointer;
+    @include flex();
+    flex-direction: column;
+    &:hover .discover-item__title {
+      color: $main-color;
+    }
+    &:hover .read-more {
+      opacity: 1;
+      visibility: visible;
+    }
+    &__img {
+      width: 100px;
+      img {
+        width: 100%;
+      }
+    }
+    &__title {
+      font-size: 1.9;
+      font-weight: 500;
+      line-height: 1.6;
+      color: #555;
+      margin: 18px 0;
+      transition: all 0.2s ease;
+      text-align: center;
+    }
+
+    .read-more {
+      opacity: 0;
+      visibility: hidden;
+      color: $main-color;
+      font-size: 1.5rem;
+      transition: all 0.2s ease;
+    }
+  }
+}
+
+.wrapper__wide {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  @include tablet {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  @include mobile {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .discover-item__title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
